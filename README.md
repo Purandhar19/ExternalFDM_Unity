@@ -14,7 +14,7 @@
 
 ---
 
-## Part 1 — Unity Project Setup (one-time, ~5 minutes)
+## Part 1 — Unity Project Setup 
 
 ### Step 1 — Create the project
 
