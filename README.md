@@ -266,7 +266,17 @@ Unity sends JSON back to Mission Planner:
 Mission Planner SITL receives sensor data, runs its PID controllers,
 produces new servo commands → loop continues at 400 Hz
 ```
+errors : 
+New-NetFirewallRule -DisplayName "SITL_IN" -Direction Inbound -Protocol UDP -LocalPort 9002 -Action Allow
+New-NetFirewallRule -DisplayName "SITL_OUT" -Direction Outbound -Protocol UDP -LocalPort 9002 -Action Allow
+```
 
+---
+
+### Outcome B — You see 9002 listed twice:
+```
+UDP    0.0.0.0:9002    *:*    1234
+UDP    0.0.0.0:9002    *:*    8328
 ---
 
 *Physics based on: Beard, R.W. & McLain, T.W., Small Unmanned Aircraft: Theory and Practice, Princeton University Press, 2012.*
